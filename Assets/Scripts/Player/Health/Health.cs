@@ -10,11 +10,11 @@ public class Health : NetworkBehaviour
 
     public override void Spawned()
     {
-        if (Object.HasInputAuthority) 
+        if (Object.HasInputAuthority)
         {
             healthUI = FindFirstObjectByType<HealthUI>();
 
-            if (healthUI != null) 
+            if (healthUI != null)
             {
                 healthUI.SetPlayer(this);
             }
@@ -29,9 +29,9 @@ public class Health : NetworkBehaviour
     }
 
     [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
-    public void DealDamageRpc(int damage)
+    public void DealDamageRpc(int damageValue) 
     {
         if (!HasStateAuthority) return;
-        NetworkedHealth -= damage;
+        NetworkedHealth -= damageValue;
     }
 }

@@ -136,7 +136,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 3
 --- !u!114 &538798092910089703
 MonoBehaviour:
@@ -153,6 +153,7 @@ MonoBehaviour:
   speed: 50
   lifeTime: 3
   damage: 2
+  rb: {fileID: -1161414610226374896}
 --- !u!114 &6108054925147415555
 MonoBehaviour:
   m_ObjectHideFlags: 0
